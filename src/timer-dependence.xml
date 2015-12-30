@@ -1,0 +1,32 @@
+<timer-commands>
+	<timer-command>
+		<outputs>1</outputs>
+		<dependence></dependence>
+		<command-content>java -version</command-content>
+	</timer-command>
+	<timer-command>
+		<outputs>2</outputs>
+		<dependence></dependence>
+		<command-content>java aa</command-content>
+	</timer-command>
+	<timer-command>
+		<outputs>3</outputs>
+		<dependence>1</dependence>
+		<command-content>java -version</command-content>
+	</timer-command>
+	<timer-command>
+		<outputs>4</outputs>
+		<dependence>2</dependence>
+		<command-content>java -version</command-content>
+	</timer-command>
+	<timer-command>
+		<outputs>5</outputs>
+		<dependence>7</dependence>
+		<command-content>java -version</command-content>
+	</timer-command>
+	<timer-command>
+		<outputs>6</outputs>
+		<dependence>5</dependence>
+		<command-content>java -version</command-content>
+	</timer-command>
+</timer-commands>
