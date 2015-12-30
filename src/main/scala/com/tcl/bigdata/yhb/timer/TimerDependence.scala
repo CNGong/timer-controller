@@ -4,11 +4,8 @@ import java.util.Date
 import com.tcl.bigdata.yhb.timer.bean.TimerDependBean
 import scala.collection.mutable
 import scala.xml.XML
-import sys.process._
+//import sys.process._
 
-/**
- * Created by root on 15-11-18.
- */
 object TimerDependence {
 
   val waitOutputs = new mutable.HashSet[String]
@@ -42,11 +39,11 @@ object TimerDependence {
       executed = new mutable.HashSet[TimerDependBean]
       for(command <- commands){
         if(command.dependence == Set("") || command.dependence.subsetOf(finishOutputs)){
-//          val process = Runtime.getRuntime.exec(command.command)
-          val isSuccess = command.command !
+          val process = Runtime.getRuntime.exec(command.command)
+//          val isSuccess = command.command !
           //判断是否执行成功
-//          if(process.waitFor() == 0){
-          if(isSuccess == 0){
+          if(process.waitFor() == 0){
+//          if(isSuccess == 0){
             println(new Date + " execute \"" + command.command + "\" success")
             waitOutputs --= command.outputs
             executed += command
