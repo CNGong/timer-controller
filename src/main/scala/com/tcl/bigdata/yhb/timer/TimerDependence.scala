@@ -3,7 +3,6 @@ package com.tcl.bigdata.yhb.timer
 import java.util.Date
 import com.tcl.bigdata.yhb.timer.bean.TimerDependBean
 import scala.collection.mutable
-import scala.language.postfixOps
 import scala.xml.XML
 import sys.process._
 
